@@ -90,8 +90,8 @@ mysql -uroot -h 127.0.0.1 -P 3306
 select 1;
 ```
 查看TiDB控制台日志
-> [2020/08/16 17:03:57.050 +08:00] [INFO] [session.go:1124] ["hello transaction"]
-> 此处如果只打印用户sql事务，可判断代码增加判断s.sessionVars.InRestrictedSQL
+> [2020/08/16 17:03:57.050 +08:00] [INFO] [session.go:1124] ["hello transaction"]  
+此处如果只打印用户sql事务，可判断代码增加判断s.sessionVars.InRestrictedSQL
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/437932/1597568665994-41db5104-f01d-46f5-8cbc-9cef294a4aa2.png#align=left&display=inline&height=314&margin=%5Bobject%20Object%5D&name=image.png&originHeight=628&originWidth=2878&size=998396&status=done&style=none&width=1439)
 
