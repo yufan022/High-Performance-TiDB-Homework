@@ -25,7 +25,7 @@ if !s.sessionVars.InRestrictedSQL {
     logutil.BgLogger().Info("hello transaction");
 }
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/437932/1597568093095-b6939b1d-f85f-44b9-9da8-866e685562ae.png#align=left&display=inline&height=372&margin=%5Bobject%20Object%5D&name=image.png&originHeight=744&originWidth=1682&size=199547&status=done&style=none&width=841)<br />
+![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson01/img/image1.png?raw=true)<br />
 
 <a name="qb0oJ"></a>
 ## 编译代码
@@ -93,5 +93,5 @@ select 1;
 > [2020/08/16 17:03:57.050 +08:00] [INFO] [session.go:1124] ["hello transaction"]  
 此处如果只打印用户sql事务，可判断代码增加判断s.sessionVars.InRestrictedSQL
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/437932/1597568665994-41db5104-f01d-46f5-8cbc-9cef294a4aa2.png#align=left&display=inline&height=314&margin=%5Bobject%20Object%5D&name=image.png&originHeight=628&originWidth=2878&size=998396&status=done&style=none&width=1439)
+![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson01/img/image0.png?raw=true)
 
