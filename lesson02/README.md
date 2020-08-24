@@ -9,11 +9,11 @@
 
 | 组件 | 阿里云 ECS | CPU | 内存 | 磁盘 | 内网带宽 | 价格 |
 | --- | --- | --- | --- | --- | --- | --- |
-| TiUP&测试机 | ecs.c6.2xlarge | 8C | 16G | ESSD PL1 云盘 100G 6800 IOPS | 2.5 Gbps | 0.760/h |
-| TiDB | ecs.c6.2xlarge * 3 | 8C | 16G | ESSD PL1 云盘 200G 11800 IOPS | 2.5 Gbps | 0.970/h |
-| PD | ecs.c6.xlarge | 4C | 8G | ESSD PL1 云盘 200G 11800 IOPS | 1.5 Gbps | 1.510/h |
-| TiKV | ecs.i2g.2xlarge * 3 | 8C | 32G | 高效云盘 100G 2600 IOPS 本地NVMe SSD 894G 147510 IOPS | 2 Gbps |  |
-| Monitor | ecs.c6.xlarge | 4C | 8G | ESSD PL0 云盘 200G 6800 IOPS | 1.5 Gbps | 0.760/h |
+| TiUP&测试机 | ecs.c6.2xlarge | 8C | 16G | ESSD PL1 云盘 100G 6800 IOPS | 2.5 Gbps |
+| TiDB | ecs.c6.2xlarge * 3 | 8C | 16G | ESSD PL1 云盘 200G 11800 IOPS | 2.5 Gbps |
+| PD | ecs.c6.xlarge | 4C | 8G | ESSD PL1 云盘 200G 11800 IOPS | 1.5 Gbps |
+| TiKV | ecs.i2g.2xlarge * 3 | 8C | 32G | 高效云盘 100G 2600 IOPS 本地NVMe SSD 894G 147510 IOPS | 2 Gbps |
+| Monitor | ecs.c6.xlarge | 4C | 8G | ESSD PL0 云盘 200G 6800 IOPS | 1.5 Gbps |
 
 - 172.29.35.242 tiup&测试机
 - 172.29.35.243 monitor
