@@ -372,7 +372,7 @@ server_configs:
 
 ### sysbench
 重新测试后在**点查询场景**下发现在512线程达到24000TPS后，再增加线程对TPS提升不大，通过监控判断**TiDB达到瓶颈** CPU负载吃满，TiKV CPU负载在60-70之间 iowait不高 NVMe磁盘未达到瓶颈，因为**TiDB负载较高导致TPS无法提升、TiKV未到瓶颈**。
-![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson02/img/image-21.png?raw=true)
+![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson02/img/image-21.png?raw=true)  
 在sysbench **索引update**场景下，**TiDB负载较低，TiKV CPU负载很高**先达到瓶颈，但观察磁盘IO不大。
 ![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson02/img/image-22.png?raw=true)
 结合火焰图来看，rocksdb __write函数与grpc __sendmsg开销较大。
