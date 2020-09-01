@@ -1,5 +1,7 @@
 # HP - Lesson 3 -【yufan022】
 
+> Issue https://github.com/pingcap/tidb/issues/19653
+
 <a name="FzdF8"></a>
 # 环境拓扑
 | 组件 | CPU | 内存 | 磁盘 |
