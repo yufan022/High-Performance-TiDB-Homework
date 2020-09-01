@@ -54,7 +54,7 @@ go tool pprof -http=:8080 debug/profile
 <a name="6J88q"></a>
 # 建议优化
 
-1. 对于TiDB查询慢sql，是否有优化空间，对于split makeSlice较为耗时函数能发优化？
+1. 对于TiDB查询慢sql，是否有优化空间，对于split makeSlice等较为耗时函数能否优化？
 1. TiKV节点磁盘是否可根据磁盘性能动态调整特性，例如根据磁盘性能动态调整参数，例如更多batch、buffer？
 
 
