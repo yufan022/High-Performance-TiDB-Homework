@@ -22,7 +22,7 @@
 # 
 <a name="LBqvP"></a>
 # 查看分析
-运行workload，发现有查询 INFORMATION_SCHEMA.CLUSTER_SLOW_QUERY 的慢SQL<br />![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson03/img/image-30.png)<br />运行命令
+运行workload，发现有查询 INFORMATION_SCHEMA.CLUSTER_SLOW_QUERY 的慢SQL<br />![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson03/img/image-30.png?raw=true)<br />运行命令
 ```shell
 curl http://127.0.0.1:10080/debug/zip?seconds=30 --output debug.zip
 
@@ -48,8 +48,8 @@ LIMIT
 
 go tool pprof -http=:8080 debug/profile
 ```
-单独查看该sql graph，flame graph<br />![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson03/img/image-31.png)<br />![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson03/img/image-32.png)<br />发现parseSlowLog函数较慢，getOneLine、makeSlice、split耗时较多<br />
-<br />同时查看整体TiKV节点IO<br />![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson03/img/image-33.png)<br />![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson03/img/image-34.png)<br />![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson03/img/image-35.png)<br />压测期间TiKV磁盘IO压力较大（本身磁盘性能较差）导致TiKV节点CPU压力不高。<br />
+单独查看该sql graph，flame graph<br />![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson03/img/image-31.png?raw=true)<br />![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson03/img/image-32.png?raw=true)<br />发现parseSlowLog函数较慢，getOneLine、makeSlice、split耗时较多<br />
+<br />同时查看整体TiKV节点IO<br />![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson03/img/image-33.png?raw=true)<br />![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson03/img/image-34.png?raw=true)<br />![image.png](https://github.com/yufan022/High-Performance-TiDB-Homework/blob/master/lesson03/img/image-35.png?raw=true)<br />压测期间TiKV磁盘IO压力较大（本身磁盘性能较差）导致TiKV节点CPU压力不高。<br />
 
 <a name="6J88q"></a>
 # 建议优化
